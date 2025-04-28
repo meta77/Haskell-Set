@@ -1,9 +1,11 @@
 -- 等比数列の有限和を計算する
+-- 公式をそのまま使う
 geometricSum :: Double -> Double -> Int -> Double
 geometricSum a1 r n = a1 * (1 - r^n) / (1 - r)
 
 -- 等比数列の無限和を計算する
 -- rの絶対値が1未満が条件
+-- 公式をそのまま使う
 geometricSumInfinite :: Double -> Double -> Maybe Double
 geometricSumInfinite a1 r
     | abs r < 1 = Just (a1 / (1 - r))
