@@ -2,6 +2,12 @@
 geometricList :: Double -> Double -> Int -> [Double]
 geometricList a1 r n = take n [a1 * r^i | i <- [0..]]
 
+{-
+[a1 * r^i | i <- [0..]]の解説
+
+
+-}
+
 -- リストの和を求める
 sumGeometricList :: Double -> Double -> Int -> Double
 sumGeometricList a1 r n = sum (geometricList a1 r n)
