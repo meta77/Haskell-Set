@@ -37,3 +37,9 @@ main :: IO ()
 main = do
     putStrLn $ "P(X = 3): " ++ show (pmf dicePMF 3)   -- => 0.166...
     putStrLn $ "P(X <= 3): " ++ show (cdf dicePMF 3)  -- => 0.5
+
+
+
+-- 共通インターフェース
+class Distribution d where
+  prob :: d a -> a -> Double
