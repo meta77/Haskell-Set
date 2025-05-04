@@ -43,3 +43,9 @@ main = do
 -- 共通インターフェース
 class Distribution d where
   prob :: d a -> a -> Double
+
+{-
+→ 「Distribution（分布）」という型クラスを定義している
+→ その型クラスは prob という関数を持っている
+→ prob は「与えられた値の確率を返す関数」
+-}
