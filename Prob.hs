@@ -41,8 +41,8 @@ main = do
 
 
 -- 共通インターフェース
-class Distribution d where
-  prob :: d a -> a -> Double
+class Distribution d where -- 「Distributionという型クラスを作るよ」
+  prob :: d a -> a -> Double -- 「d型の分布を渡して、値aに対する確率を返す関数probを要求するよ」
 
 {-
 → 「Distribution（分布）」という型クラスを定義している
