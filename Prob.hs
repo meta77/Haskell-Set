@@ -49,3 +49,12 @@ class Distribution d where -- 「Distributionという型クラスを作るよ�
 → その型クラスは prob という関数を持っている
 → prob は「与えられた値の確率を返す関数」
 -}
+
+
+-- Distribution型クラスの例
+type PMF a = [(a, Double)]
+
+instance Distribution PMF where
+  prob pmf x = case lookup x pmf of
+                 Just p -> p
+                 Nothing -> 0.0
