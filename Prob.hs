@@ -57,3 +57,5 @@ instance Distribution PMF where
   prob pmf x = case lookup x pmf of
                  Just p -> p
                  Nothing -> 0.0
+-- lookupの意味
+lookup :: Eq a => a -> [(a, b)] -> Maybe b
