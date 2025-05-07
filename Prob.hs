@@ -53,7 +53,6 @@ class Distribution d where -- 「Distributionという型クラスを作るよ�
 
 -- Distribution型クラスの例
 type PMF a = [(a, Double)]
-
 instance Distribution PMF where
   prob pmf x = case lookup x pmf of
                  Just p -> p
