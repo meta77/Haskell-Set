@@ -59,3 +59,10 @@ instance Distribution PMF where
                  Nothing -> 0.0
 -- lookupの意味
 lookup :: Eq a => a -> [(a, b)] -> Maybe b
+{-
+「リストの中から特定のキーに対応する値を探す」
+
+結果は Maybe 型（Just か Nothing）で返ってくる
+見つからなかったときも安全に扱える
+case などを使って Maybe をちゃんと処理する必要がある
+-}
