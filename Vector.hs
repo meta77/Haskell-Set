@@ -40,6 +40,7 @@ instance VectorSpace Vec2 where
   k *^ (Vec2 x y) = Vec2 (k*x) (k*y)
 
 
+-- ex
 v1 = Vec2 1.0 2.0
 v2 = Vec2 3.0 4.0
 
