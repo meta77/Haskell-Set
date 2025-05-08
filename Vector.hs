@@ -23,6 +23,8 @@ scaledVec = scaleVec2 2.5 v1
 -- Vec2 2.5 5.0
 
 
+
+-- 型クラスを作って、それにVec2型を「参加」させる。
 class VectorSpace v where
   zeroV :: v          -- ゼロベクトル
   (^+^) :: v -> v -> v  -- ベクトル加算
