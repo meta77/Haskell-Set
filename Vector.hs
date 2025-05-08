@@ -33,11 +33,12 @@ class VectorSpace v where
   (*^)  :: Double -> v -> v -- スカラー倍
   -- (*^)という関数は、**Double（数）とv型（ベクトル）**を受け取って、v型を返す
 
-
+-- 型Vec2を、型クラスVectorSpaceのメンバーにする。
 instance VectorSpace Vec2 where
   zeroV = Vec2 0 0
   (Vec2 x1 y1) ^+^ (Vec2 x2 y2) = Vec2 (x1 + x2) (y1 + y2)
   k *^ (Vec2 x y) = Vec2 (k*x) (k*y)
+
 
 v1 = Vec2 1.0 2.0
 v2 = Vec2 3.0 4.0
