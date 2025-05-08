@@ -26,9 +26,13 @@ scaledVec = scaleVec2 2.5 v1
 
 -- 型クラスを作って、それにVec2型を「参加」させる。
 class VectorSpace v where
-  zeroV :: v          -- ゼロベクトル
+  zeroV :: v          -- ゼロベクトル　　zeroVという関数は、型vの値を返す
   (^+^) :: v -> v -> v  -- ベクトル加算
+  -- (^+^)という関数は、2つのv型を受け取って、v型を返す
+  -- ^+^はただの関数名です。+に近い見た目で、わかりやすくしただけ。
   (*^)  :: Double -> v -> v -- スカラー倍
+  -- (*^)という関数は、**Double（数）とv型（ベクトル）**を受け取って、v型を返す
+
 
 instance VectorSpace Vec2 where
   zeroV = Vec2 0 0
