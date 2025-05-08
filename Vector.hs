@@ -21,3 +21,9 @@ sumVec = addVec2 v1 v2
 -- スカラー倍
 scaledVec = scaleVec2 2.5 v1
 -- Vec2 2.5 5.0
+
+
+class VectorSpace v where
+  zeroV :: v          -- ゼロベクトル
+  (^+^) :: v -> v -> v  -- ベクトル加算
+  (*^)  :: Double -> v -> v -- スカラー倍
