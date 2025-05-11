@@ -31,6 +31,8 @@ class VectorSpace v where
   (*^)  :: Double -> v -> v -- スカラー倍
   -- (*^)という関数は、**Double（数）とv型（ベクトル）**を受け取って、v型を返す
 
+-- 「各ベクトルに逆元が存在」などの条件は含まれている。
+
 -- 型Vec2を、型クラスVectorSpaceのメンバーにする。
 instance VectorSpace Vec2 where
   zeroV = Vec2 0 0
