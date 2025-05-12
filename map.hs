@@ -38,3 +38,14 @@ dupMap = Mapping {
   domain = [1,2,3],
   codomain = [1,2]
 }
+
+-- 実行例
+main :: IO ()
+main = do
+  putStrLn $ "doubleMapは単射か？ " ++ show (isInjective doubleMap) -- True
+  putStrLn $ "doubleMapは全射か？ " ++ show (isSurjective doubleMap) -- True
+  putStrLn $ "doubleMapは全単射か？ " ++ show (isBijective doubleMap) -- True
+
+  putStrLn $ "dupMapは単射か？ " ++ show (isInjective dupMap) -- False
+  putStrLn $ "dupMapは全射か？ " ++ show (isSurjective dupMap) -- True
+  putStrLn $ "dupMapは全単射か？ " ++ show (isBijective dupMap) -- False
