@@ -5,6 +5,15 @@ data Mapping a b = Mapping { -- 「Mapping」という名前の型を作りま�
   codomain :: [b]     -- 値域 (B)
 }
 
+
+{-
+コンストラクタとは？
+
+データ型から、実際の「値」を作るときに使う特別な関数
+
+
+-}
+
 import Data.List (nub, sort)
 
 -- 単射判定
