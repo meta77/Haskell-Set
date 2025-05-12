@@ -1,5 +1,5 @@
 -- 写像のデータ型
-data Mapping a b = Mapping {
+data Mapping a b = Mapping { -- 「Mapping」という名前の型を作ります。a と b は型変数（どんな型でもよい、という意味）です。
   apply :: a -> b,    -- 写像の本体 (関数)
   domain :: [a],      -- 定義域 (A)
   codomain :: [b]     -- 値域 (B)
