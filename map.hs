@@ -30,3 +30,11 @@ doubleMap = Mapping {
   domain = [1,2,3],
   codomain = [2,4,6]
 }
+
+-- 写像例2: 自然数 1,2,3 -> 自然数 1,2,2 (ダブりあり)
+dupMap :: Mapping Int Int
+dupMap = Mapping {
+  apply = \x -> if x == 1 then 1 else 2,
+  domain = [1,2,3],
+  codomain = [1,2]
+}
