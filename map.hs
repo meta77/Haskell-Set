@@ -16,10 +16,14 @@ data Mapping a b = Mapping { -- 「Mapping」という名前の型を作りま�
 import Data.List (nub, sort)
 
 -- 単射判定
-isInjective :: (Eq b) => Mapping a b -> Bool
+isInjective :: (Eq b) => Mapping a b -> Bool -- 入力は「写像」型。出力は Bool型。
 isInjective (Mapping f dom _) =
   let images = map f dom
-  in length (nub images) == length images
+  in length (nub images) == length images -- nub リストの重複を取り除きます。標準ライブラリの関数です（Data.Listにあります）。
+--　「重複を除いた長さ」と「元の長さ」が等しいか？　→ 重複がなければ、つまり「全て異なっていれば、単射。True。
+
+
+
 
 -- 全射判定
 isSurjective :: (Eq b) => Mapping a b -> Bool
