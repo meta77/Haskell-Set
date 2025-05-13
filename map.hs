@@ -31,7 +31,11 @@ isSurjective (Mapping f dom codom) =
   let images = map f dom
   in all (`elem` images) codom -- 「値域 codom のすべての要素が、images に含まれているか？」
 
-
+{-
+all
+型: all :: (a -> Bool) -> [a] -> Bool
+意味: 「リストのすべての要素が、条件を満たすか？」
+-}
 
 
 -- 全単射判定
