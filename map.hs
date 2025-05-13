@@ -22,7 +22,9 @@ isInjective (Mapping f dom _) =
   in length (nub images) == length images -- nub リストの重複を取り除きます。標準ライブラリの関数です（Data.Listにあります）。
 --　「重複を除いた長さ」と「元の長さ」が等しいか？　→ 重複がなければ、つまり「全て異なっていれば、単射。True。
 
+{-
 
+-}
 
 
 -- 全射判定
@@ -33,8 +35,16 @@ isSurjective (Mapping f dom codom) =
 
 {-
 all
+
 型: all :: (a -> Bool) -> [a] -> Bool
 意味: 「リストのすべての要素が、条件を満たすか？」
+-}
+
+{-
+(`elem` images)
+
+セクション記法で、無名関数です。
+\x -> x `elem` images と同じ。
 -}
 
 
