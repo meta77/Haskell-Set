@@ -29,7 +29,10 @@ isInjective (Mapping f dom _) =
 isSurjective :: (Eq b) => Mapping a b -> Bool
 isSurjective (Mapping f dom codom) =
   let images = map f dom
-  in all (`elem` images) codom
+  in all (`elem` images) codom -- 「値域 codom のすべての要素が、images に含まれているか？」
+
+
+
 
 -- 全単射判定
 isBijective :: (Eq b) => Mapping a b -> Bool
